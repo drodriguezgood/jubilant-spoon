@@ -1,9 +1,14 @@
 #!/bin/bash
-
+echo -e '### Departamento Nvos. Proyectos. ###'
+echo -e '### Dev. Daniel Rodriguez         ###'
+echo -e '### ............................. ###'
+echo -e '### ............................. ###'
+echo -e '### .....Recursos Compilador..... ###'
+echo -e 'Actualizar paquetes..................'
 # exit on error
-set -e
+pwd=`pwd`
 
-for FILE in `find ../selling-partner-api-models/models -name "*.json"`; do 
+for FILE in `find ../selling-partner-api-models/models -name "*.json"`; do
 	API_NAME=`echo $FILE | awk -F/ '{print $4}'`
 	MODULE_NAME=`echo $API_NAME | perl -pe 's/(^|-)./uc($&)/ge;s/-//g'`
 
